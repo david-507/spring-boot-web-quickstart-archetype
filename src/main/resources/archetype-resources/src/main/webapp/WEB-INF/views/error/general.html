@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/assets/css/styles.min.css}"/>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/layout :: header"></div>
+    <div th:replace="fragments/components :: alert (type='danger', message=${errorMessage})">Error: Error</div>
+    <div th:replace="fragments/layout :: footer"></div>
+</div>
+</body>
+</html>
